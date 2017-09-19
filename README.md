@@ -11,7 +11,7 @@ Certbot, previously the Let's Encrypt Client, is EFF's tool to obtain certs from
 
 ### How to use this image
 * ``` $ docker pull tobi312/rpi-certbot ```
-* ``` $ docker run --name certbot -it tobi312/rpi-certbot sh -c 'certbot certonly --standalone -d __YOUR-DOMAIN__ -d www.__YOUR-DOMAIN__ --email __YOUR-EMAIL__ --text --agree-tos --server https://acme-v01.api.letsencrypt.org/directory --rsa-key-size 4096 --verbose --renew-by-default --standalone-supported-challenges http-01' ```
+* ``` $ docker run --name certbot -it -v ./letsencrypt:/etc/letsencrypt -p 80:80 -p 443:443 tobi312/rpi-certbot sh -c 'certbot certonly --standalone -d __YOUR-DOMAIN__ -d www.__YOUR-DOMAIN__ --email __YOUR-EMAIL__ --text --agree-tos --server https://acme-v01.api.letsencrypt.org/directory --rsa-key-size 4096 --verbose --renew-by-default --standalone-supported-challenges http-01' ```
 	* Renew: ``` $ docker exec -it webgis_mysql_1 sh -c 'certbot renew' ```
 
 ### This Image on
