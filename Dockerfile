@@ -6,8 +6,8 @@ ENV CERTBOT_VERSION 0.14
 
 RUN [ "cross-build-start" ]
 
-#RUN apk add --update certbot>${CERTBOT_VERSION} && rm -rf /var/cache/apk/*
-RUN apk --no-cache add certbot>${CERTBOT_VERSION}
+#RUN set -x && apk add --update certbot>${CERTBOT_VERSION} && rm -rf /var/cache/apk/*
+RUN set -x && apk --no-cache add certbot>${CERTBOT_VERSION}
 
 RUN [ "cross-build-end" ]
 
