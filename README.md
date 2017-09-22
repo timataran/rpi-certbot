@@ -1,7 +1,5 @@
 # Let's Encrypt / Certbot on Raspberry Pi / armhf 
 
-### TESTING TESTING TESTING TESTING TESTING
-
 ### Supported tags and respective `Dockerfile` links
 -	`latest` (*It always uses the latest [certbot version](https://pkgs.alpinelinux.org/package/v3.6/community/armhf/certbot) contained in alpinelinux.*)
 
