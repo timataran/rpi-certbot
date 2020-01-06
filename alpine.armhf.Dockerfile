@@ -1,4 +1,4 @@
-FROM arm32v7/alpine:3.10
+FROM arm32v7/alpine:3.11
 
 LABEL org.opencontainers.image.authors="Tobias Hargesheimer <docker@ison.ws>" \
 	org.opencontainers.image.title="CertBot" \
@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.authors="Tobias Hargesheimer <docker@ison.ws>" \
 	org.opencontainers.image.url="https://hub.docker.com/r/tobi312/rpi-certbot" \
 	org.opencontainers.image.source="https://github.com/Tob1asDocker/rpi-certbot"
 
-ENV CERTBOT_VERSION 0.35
+ENV CERTBOT_VERSION 1.0
 
 #RUN set -x && apk add --update certbot>${CERTBOT_VERSION} && rm -rf /var/cache/apk/*
 RUN set -x && apk --no-cache add certbot>${CERTBOT_VERSION}
