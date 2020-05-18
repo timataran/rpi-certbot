@@ -14,11 +14,12 @@ WORKDIR /opt/certbot
 
 # Retrieve certbot code
 RUN mkdir -p src \
- && CERTBOT_VERSION=$(wget -qO- https://api.github.com/repos/certbot/certbot/releases/latest | grep 'tag_name' | cut -d\" -f4 | tr -d v) && echo "${CERTBOT_VERSION}" \
+ && CERTBOT_VERSION=$(wget -qO- https://api.github.com/repos/certbot/certbot/releases/latest | grep 'tag_name' | cut -d\" -f4 | tr -d v) && echo "CERTBOT_VERSION=${CERTBOT_VERSION}" \
  && wget -O certbot-${CERTBOT_VERSION}.tar.gz https://github.com/certbot/certbot/archive/v${CERTBOT_VERSION}.tar.gz \
  && tar xf certbot-${CERTBOT_VERSION}.tar.gz \
  && cp certbot-${CERTBOT_VERSION}/CHANGELOG.md certbot-${CERTBOT_VERSION}/README.rst src/ \
  && cp certbot-${CERTBOT_VERSION}/letsencrypt-auto-source/pieces/dependency-requirements.txt . \
+ && cp certbot-${CERTBOT_VERSION}/letsencrypt-auto-source/pieces/pipstrap.py . \
  && cp -r certbot-${CERTBOT_VERSION}/tools tools \
  && cp -r certbot-${CERTBOT_VERSION}/acme src/acme \
  && cp -r certbot-${CERTBOT_VERSION}/certbot src/certbot \
@@ -43,6 +44,7 @@ RUN apk add --no-cache --virtual .build-deps \
         openssl-dev \
         musl-dev \
         libffi-dev \
+    && python pipstrap.py \
     && pip install -r dependency-requirements.txt \
     && pip install --no-cache-dir --no-deps \
         --editable src/acme \
