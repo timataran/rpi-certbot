@@ -7,7 +7,8 @@ LABEL org.opencontainers.image.authors="Electronic Frontier Foundation and other
 	org.opencontainers.image.url="https://hub.docker.com/r/tobi312/rpi-certbot" \
 	org.opencontainers.image.source="https://github.com/Tob1asDocker/rpi-certbot"
 
-ENV CERTBOT_VERSION=1.2.0
+ARG CERTBOT_VERSION
+ENV CERTBOT_VERSION=${CERTBOT_VERSION}
 
 ENTRYPOINT [ "certbot" ]
 EXPOSE 80 443
