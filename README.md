@@ -14,7 +14,7 @@ Please use the following alternative images:
 
 ### Supported tags and respective `Dockerfile` links
 -	[`latest` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-certbot/blob/master/alpine.armhf.fork.Dockerfile) (*It always uses the latest [certbot version](https://github.com/certbot/certbot/releases/latest) with alpinelinux.*)
--	[`1.0.0` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-certbot/blob/master/alpine.armhf.Dockerfile) (*It is the latest [certbot version](https://pkgs.alpinelinux.org/package/v3.12/community/armhf/certbot) contained in alpinelinux.*)
+-	[`1.4.0` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-certbot/blob/master/alpine.armhf.Dockerfile) (*It is the latest [certbot version](https://pkgs.alpinelinux.org/package/v3.12/community/armhf/certbot) contained in alpinelinux.*)
 
 ### What is Certbot?
 Certbot, previously the Let's Encrypt Client, is EFF's tool to obtain certs from Let's Encrypt, and (optionally) auto-enable HTTPS on your server. It can also act as a client for any other CA that uses the ACME protocol. 
