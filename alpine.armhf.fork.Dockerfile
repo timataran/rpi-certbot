@@ -1,4 +1,4 @@
-FROM arm32v7/python:3.8-alpine3.11
+FROM arm32v7/python:3.8-alpine3.12
 
 LABEL org.opencontainers.image.authors="Electronic Frontier Foundation and others, Tobias Hargesheimer <docker@ison.ws>" \
 	org.opencontainers.image.title="CertBot" \

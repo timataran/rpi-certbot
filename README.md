@@ -1,5 +1,17 @@
 # Let's Encrypt / Certbot on Raspberry Pi / ARM
 
+### NOT MAINTAINED AND DEPRECATED
+
+This image is not maintained and is deprecated!  
+  
+Please use the following alternative images:
+
+* the Official Certbot Images on [DockerHub](https://hub.docker.com/r/certbot/certbot)/[GitHub](https://github.com/certbot-docker/certbot-docker), with ARM Images.
+* acme.sh: [DockerHub](https://hub.docker.com/r/neilpang/acme.sh)/[GitHub](https://github.com/acmesh-official/acme.sh)
+* getSSL: [GitHub](https://github.com/srvrco/getssl) (without docker image)
+
+---
+
 ### Supported tags and respective `Dockerfile` links
 -	[`latest` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-certbot/blob/master/alpine.armhf.fork.Dockerfile) (*It always uses the latest [certbot version](https://github.com/certbot/certbot/releases/latest) with alpinelinux.*)
 -	[`1.0.0` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-certbot/blob/master/alpine.armhf.Dockerfile) (*It is the latest [certbot version](https://pkgs.alpinelinux.org/package/v3.11/community/armhf/certbot) contained in alpinelinux.*)
